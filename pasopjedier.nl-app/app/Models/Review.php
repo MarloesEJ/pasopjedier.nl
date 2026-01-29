@@ -11,7 +11,7 @@ class Review extends Model
 
     public function request()
     {
-        return $this->belongsTo(OppasRequest::class, 'opas_request_id');
+        return $this->belongsTo(OppasRequest::class, 'oppas_request_id');
     }
 
     public function author()
@@ -21,6 +21,6 @@ class Review extends Model
 
     public function target()
     {
-        return $this->belongsTo(User::class, 'target_id');
+        return $this->belongsTo(User::class, 'target_user_id');
     }
 }

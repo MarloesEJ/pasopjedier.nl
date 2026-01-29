@@ -21,6 +21,8 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->json("needs")->nullable();
             $table->boolean('active')->default(true);
+            $table->date('start_date')->nullable();
+            $table->date('end_date')->nullable();
             $table->timestamps();
         });
     }

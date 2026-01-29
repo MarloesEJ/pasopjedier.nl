@@ -13,11 +13,23 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        // maakt 1 admin aan
+        \App\Models\User::factory()->create([
+            'name' => 'Admin User',
+            'email' => 'admin@pasopjedier.nl',
+            'is_admin' => true,
         ]);
+
+        //maakt 5 oppassers aan
+        \App\Models\User::factory(5)->create(['is_sitter' => true])->each(function ($user){
+            $user->sitterProfile()->create
+            ([
+                'description' => 'Ik ben een ervaren oppasser en een echte dierenvriend.',
+                'hourly_rate' => rand(5, 20),
+            ]);
+        });
+
+        //maakt 10 eigenaren aan
+        \App\Models\OppasRequest::factory(10)->create();
     }
 }

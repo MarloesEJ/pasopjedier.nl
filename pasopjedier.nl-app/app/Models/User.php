@@ -20,6 +20,10 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'city',
+        'postcode',
+        'is_sitter',
+        'is_admin',
     ];
 
     /**
@@ -62,7 +66,7 @@ class User extends Authenticatable
 
     public function responses()
     {
-        return $this->hasMany(OppasResponse::class, 'sitter_id');
+        return $this->hasMany(Response::class, 'sitter_id');
     }
 
     public function blocksMade()

@@ -16,8 +16,14 @@ class PetFactory extends Factory
      */
     public function definition(): array
     {
+        $species = ['Hond', 'Kat', 'Vogel', 'Knaagdier'];
         return [
-            //
-        ];
+            'user_id' => \App\Models\User::factory(),
+            'name' => fake()->firstName(),
+            'species' => fake()->randomElement($species),
+            'age' => fake()->numberBetween(1, 15),
+            'description' => "Een heel lief dier dat graag aandacht krijgt en goed met kinderen kan.",
+            'active' => true,
+        ]; 
     }
 }

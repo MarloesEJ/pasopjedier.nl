@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('oppas_request_id')->constrained('oppas_requests')->onDelete('cascade');
             $table->foreignId('author_id')->constrained('users')->onDelete('cascade');
-            $table->foreignId('taget_user_id')->constrained('users')->onDelete('cascade');
+            $table->foreignId('target_user_id')->constrained('users')->onDelete('cascade');
             $table->tinyInteger('rating')->unsigned();
             $table->text('comment')->nullable();
             $table->timestamps();

@@ -1,0 +1,178 @@
+:root{
+    --pink-secondary: #AE8CA3;
+    --Murrey-primary: #880044;
+    --Dark-purple: #210124;
+    --background: #F2F2F2;
+    --text-color: #181818;
+    --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.main-nav{
+    background: var(--background);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.nav-logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.nav-logo .hightlight{
+    color: var(--pink-secondary);
+}
+
+.login-wrapper{
+    display: flex;
+    min-height: 100vh;
+}
+
+.login-image-side{
+    flex: 1;
+    display: none;
+}
+
+.login-form-side{
+    flex: 1;
+    background: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.form-inner{
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-title{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: var(--Dark-purple);
+}
+
+.input-field input{
+    width: 100%;
+    padding: 12px 15px;
+    background: #f7fafc;
+    border: 1px solid #edf2f7;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.btn-submit-pink{
+    width: 100%;
+    background: var(--Murrey-primary);
+    color: var(--background);
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+btn-register-outlin{
+    display: block;
+    text-align: center;
+    background: var(--pink-secondary);
+    color: var(--background);
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 2rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+.pet-card{
+    transition: transform 0.3s ease, bopx-shadow 0.3s ease;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    background: var(--background);
+    box-shadow: var(--card-shadow);
+}
+
+.pet-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.btn-pink{
+    background-color: var(--pink-secondary);
+    color: var(--background);
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    transition: background 0.2s ease;
+}
+
+.btn-pink:hover{
+    background-color: var(--pink-secondary, 0.8);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-murrey{
+    background-color: var(--Murrey-primary);
+    color: var(--background);
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    transition: background 0.2s ease;
+    text-decoration: none;
+}
+
+.btn-murrey:hover{
+    background-color: var(--Murrey-primary, 0.8);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form-container {
+    @apply min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4;
+}
+
+.form-card {
+    @apply bg-white p-8 rounded-3xl shadow-xl max-w-lg w-full border border-gray-100;
+}
+
+.input-group label {
+    @apply block text-sm font-semibold text-gray-700 mb-1;
+}
+
+.input-group input, 
+.input-group select, 
+.input-group textarea {
+    @apply w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-pink-500 outline-none transition-all;
+}
+
+.file-input {
+    @apply bg-white border-dashed border-2 border-gray-300 p-4 cursor-pointer hover:border-pink-500;
+}
+
+@media(min-width: 768px) {
+    .login-image-side {
+        display: block;
+    }
+}
